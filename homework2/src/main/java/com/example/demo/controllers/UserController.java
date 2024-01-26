@@ -27,7 +27,6 @@ public class UserController {
 
         model.addAttribute("users", users);
         return "user-list";
-        //return "home.html";
     }
 
     @GetMapping("/user-create")
@@ -44,6 +43,15 @@ public class UserController {
     @GetMapping("user-delete/{id}")
     public String deleteUser(@PathVariable("id") int id){
         userService.deleteById(id);
+        return "redirect:/users";
+    }
+
+    @GetMapping("/user-update/{id}")
+    public String updateUserForm(User user, @PathVariable("id") int id) {return "user-update";}
+
+    @PostMapping("/user-update")
+    public String updateUser(User user){
+        userService.update(user);
         return "redirect:/users";
     }
 }

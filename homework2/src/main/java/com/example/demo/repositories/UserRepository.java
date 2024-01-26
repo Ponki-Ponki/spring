@@ -30,15 +30,19 @@ public class UserRepository {
         return jdbc.query(sql, userRowMapper);
     }
 
-    public User save(User user) {
+    public void save(User user) {
         String sql = "INSERT INTO userTable VALUES (NULL, ?, ?)";
         jdbc.update(sql, user.getFirstName(), user.getLastName());
-        return  user;
     }
 
     public void deleteById(int id){
         String sql = "DELETE FROM userTable WHERE id=?";
         jdbc.update(sql, id);
+    }
+
+    public void updateUser(User user){
+        String sql = "UPDATE FROM userTable VALUES(NULL, ?, ?) WHERE id=?";
+        jdbc.update(sql,user.getFirstName(), user.getLastName(), user.getId());
     }
 
 }
