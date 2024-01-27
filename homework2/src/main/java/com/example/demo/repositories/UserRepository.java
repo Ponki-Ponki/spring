@@ -42,7 +42,7 @@ public class UserRepository {
 
     public void updateUser(User user){
         String sql = "UPDATE FROM userTable VALUES(NULL, ?, ?) WHERE id=?";
-        jdbc.update(sql,user.getFirstName(), user.getLastName(), user.getId());
+        jdbc.update(sql, user.getFirstName(), user.getLastName(), user.getId());
     }
 
 }
