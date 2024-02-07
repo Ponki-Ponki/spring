@@ -3,10 +3,14 @@ package homework5.Controllers;
 import homework5.services.TaskService;
 import homework5.task.Task;
 import homework5.task.TaskStatus;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+@RestController
+@AllArgsConstructor
 public class TaskController {
 
     TaskService taskService;

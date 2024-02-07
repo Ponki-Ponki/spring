@@ -16,7 +16,7 @@ public class TaskService {
     private final TaskRepository repository;
 
     public Task addTask(Task task){
-        task.setTaskStatus(TaskStatus.NOT_STARTED);
+        task.setStatus(TaskStatus.NOT_STARTED);
         task.setDateCreate(LocalDateTime.now());
         repository.save(task);
         return task;
@@ -33,7 +33,7 @@ public class TaskService {
     public Task updateTask(Long id,Task task){
         Task tempTask = repository.findById(id).orElseThrow(() -> new TaskNotFoundException("Not found task!") );
         tempTask.setDescription(task.getDescription());
-        tempTask.setTaskStatus(task.getTaskStatus());
+        tempTask.setStatus(task.getStatus());
         return repository.save(tempTask);
     }
 

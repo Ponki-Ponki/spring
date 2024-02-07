@@ -1,4 +1,4 @@
-create table account (
+create table TASKS (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     description   varchar(255) not null,
     taskStatus        varchar(255) not null,
