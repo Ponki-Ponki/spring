@@ -1,11 +1,15 @@
 package homework5.task;
 
-import java.time.LocalDateTime;
+import lombok.Data;
+import lombok.NonNull;
 
+import java.time.LocalDateTime;
+@Data
 public class Task {
+
     Long id;
+    @NonNull String textTask;
     TaskStatus taskStatus;
-    String textTask;
     LocalDateTime dateCreate;
 
 }
