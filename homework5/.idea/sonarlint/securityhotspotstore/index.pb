@@ -3,8 +3,6 @@
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 X
 (src/main/java/homework5/Application.java,2\6\26a2022c19fd1f735b598eaeafa6745b91a8d8f4
-[
-+src/main/java/homework5/task/TaskController,e\c\ec318bf618960429f5d789c29e64927c9bd60904
 V
 &src/main/java/homework5/task/Task.java,2\e\2ef79656412d2f6aa10e83f31529da05ebafadbc
 g
@@ -17,7 +15,5 @@ a
 1src/main/java/homework5/services/TaskService.java,c\4\c4c9a1cf611acf9e067cedae24cfbe1aa40d481c
 `
 0src/main/java/homework5/dto/TransferRequest.java,b\4\b4078264b6aff66e4e3bd18108240df112f21478
-k
-;src/main/java/homework5/exeption/TaskNotFoundException.java,b\7\b7dba8dddff83696c25250f6544aebf3745c9889
 l
 <src/main/java/homework5/exception/TaskNotFoundException.java,0\3\03ffa281476c00350b90f5c87907237b0a2a18f4

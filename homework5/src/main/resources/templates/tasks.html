@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+<div th:switch="${tasks}">
+    <h2 th:case="null">No task found!</h2>
+    <div th:case="*">
+        <h2>Task</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${tasks}">
+                <td th:text="${task.id}"></td>
+                <td th:text="${task.description}"></td>
+                <td th:text="${task.status}"></td>
+                <td th:text="${task.dateCreate}"></td>
+                <td><a th:href="@{updateTaskStatus/{id}(id=${task.id})}">Edit</a></td>
+                <td><a th:href="@{deleteTask/{id}(id=${task.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

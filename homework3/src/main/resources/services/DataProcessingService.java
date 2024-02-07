@@ -1,4 +1,4 @@
-package com.example.sem3HomeTask.services;
+package services;
 
 import com.example.sem3HomeTask.domain.User;
 import com.example.sem3HomeTask.repository.UserRepository;

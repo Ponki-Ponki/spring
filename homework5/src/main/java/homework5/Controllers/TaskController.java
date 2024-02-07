@@ -4,6 +4,7 @@ import homework5.services.TaskService;
 import homework5.task.Task;
 import homework5.task.TaskStatus;
 import lombok.AllArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,15 +15,19 @@ import java.util.List;
 public class TaskController {
 
     TaskService taskService;
+
+
     @PostMapping("/add")
     public Task addTask(@RequestBody Task task){
        return taskService.addTask(task);
     }
-
-    @GetMapping("/")
-    public List<Task> getAllTasks(){
-        return taskService.getAllTask();
+    @GetMapping("/tasks")
+    public String getAllTasks(Model model){
+        List<Task> tasks = taskService.getAllTask();
+        model.addAttribute("tasks",tasks);
+        return "tasks";
     }
+
 
     @GetMapping("/status/{status}")
     public List<Task> getTasksByStatus(@PathVariable TaskStatus status){

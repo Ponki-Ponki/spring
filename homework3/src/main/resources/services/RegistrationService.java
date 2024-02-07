@@ -1,4 +1,4 @@
-package com.example.sem3HomeTask.services;
+package services;
 
 import com.example.sem3HomeTask.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
