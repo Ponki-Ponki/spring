@@ -10,12 +10,12 @@ import java.util.List;
 public class TaskController {
 
     TaskService taskService;
-    @PostMapping
+    @PostMapping("/add")
     public Task addTask(@RequestBody Task task){
        return taskService.addTask(task);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Task> getAllTasks(){
         return taskService.getAllTask();
     }
@@ -27,11 +27,11 @@ public class TaskController {
 
     @PutMapping("/{id}")
     public Task updateTaskStatus(@PathVariable Long id, @RequestBody Task task){
-
+        return taskService.updateTask(id, task);
     }
 
     @DeleteMapping("/{id}")
     public void deleteTask(@PathVariable Long id){
-
+        taskService.deleteTask(id);
     }
 }
