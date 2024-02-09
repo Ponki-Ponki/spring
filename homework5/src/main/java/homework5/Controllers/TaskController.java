@@ -18,8 +18,9 @@ public class TaskController {
 
 
     @PostMapping("/add")
-    public Task addTask(@RequestBody Task task){
-       return taskService.addTask(task);
+    public String addTask(@RequestBody Task task){
+        taskService.addTask(task);
+        return "tasks";
     }
     @GetMapping("/tasks")
     public String getAllTasks(Model model){

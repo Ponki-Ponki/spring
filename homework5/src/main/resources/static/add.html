@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<body>
+<span th:text="${task}"></span>
+<form action="/hello" method="post">
+    <label>
+        Description:
+        <input type="text" name="description">
+    </label><br />
+    <button type="submit">Add task</button>
+</form>
+</body>
+</html>
