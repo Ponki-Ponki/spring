@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1 class="heading">Welcome!</h1>
+    <form action="/home" method="post">
+
+        <button class="btn" type="submit">Add user</button>
+    </form>
+    <script>
+        const headingEl = document.querySelector('.heading');
+        headingEl.style.cssText = 'color: blue';
+
+        const btnEl = document.querySelector('.btn');
+        btnEl.style.backgroundColor = '#E6E6FA';
+        btnEl.style.MozBorderRadius = '5px';
+        btnEl.style.WebkitBorderRadius = '5px';
+        btnEl.style.padding = "5px";
+        btnEl.style.paddingLeft = "15px";
+        btnEl.style.paddingRight = "15px";
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+февр. 17, 2024 7:48:22 PM com.example.task.aspects.LoggingAspect logExecution
+INFO: LoggingAspect
+Вызван метод: findAll
+Передаваемые параметры: []
+Возвращаемые параметры: 201 CREATED[]
+Время обработки запроса: 409
+февр. 17, 2024 7:49:03 PM com.example.task.aspects.LoggingAspect logExecution
+INFO: LoggingAspect
+Вызван метод: addTask
+Передаваемые параметры: [Task(id=1, description=Первая заметка, taskStatus=NOT_STARTED, dateOfCreation=2024-02-17T19:49:03.868564100)]
+Возвращаемые параметры: 201 CREATEDTask(id=1, description=Первая заметка, taskStatus=NOT_STARTED, dateOfCreation=2024-02-17T19:49:03.868564100)
+Время обработки запроса: 119
+февр. 17, 2024 7:49:10 PM com.example.task.aspects.LoggingAspect logExecution
+INFO: LoggingAspect
+Вызван метод: findAll
+Передаваемые параметры: []
+Возвращаемые параметры: 201 CREATED[Task(id=1, description=Первая заметка, taskStatus=NOT_STARTED, dateOfCreation=2024-02-17T19:49:03.868564)]
+Время обработки запроса: 20
